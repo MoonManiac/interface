@@ -1,11 +1,11 @@
 import { opacifyRaw } from 'ui/src/theme/color/utils'
 
 const accentColors = {
-  pinkLight: '#FEF4FF',
-  pinkPastel: '#FDAFF0',
-  pinkBase: '#FC74FE',
-  pinkVibrant: '#F50DB4',
-  pinkDark: '#361A37',
+  pinkLight: '#EBF8F7',
+  pinkPastel: '#A5F8F2',
+  pinkBase: '#66F7EE',
+  pinkVibrant: '#0CE6D8',
+  pinkDark: '#193634',
 
   redLight: '#FFF2F1',
   redPastel: '#FDCFC4',
@@ -91,7 +91,7 @@ export const DEP_accentColors = {
   green400: '#209853',
   magenta100: '#FAD8F8',
   magenta50: '#FFF1FE',
-  magentaVibrant: '#FC72FF',
+  magentaVibrant: '#09A89E',
   red200: '#FEA79B',
   red300: '#FD766B',
   red400: '#FA2B39',
@@ -178,14 +178,14 @@ const sporeLight = {
   surface4: 'rgba(255,255,255,0.64)',
   surface5: 'rgba(0,0,0,0.04)',
 
-  accent1: '#FC72FF',
-  accent1Hovered: '#FD3CFE',
-  accent2: '#FEF4FF',
-  accent2Hovered: '#FEEBFC',
+  accent1: '#09A89E',
+  accent1Hovered: '#08C1B5',
+  accent2: '#EBF8F7',
+  accent2Hovered: '#D3FAF7',
   accent3: '#222222',
   accent3Hovered: colors.black,
 
-  DEP_accentSoft: '#FC72FF33', //33 = 20%
+  DEP_accentSoft: '#09A89E33', //33 = 20%
   DEP_blue400: '#4C82FB',
 
   statusSuccess: '#21C95E',
@@ -225,14 +225,14 @@ const sporeDark = {
   surface4: 'rgba(255,255,255,0.20)',
   surface5: 'rgba(0,0,0,0.04)',
 
-  accent1: '#FC72FF',
-  accent1Hovered: '#FD3CFE',
-  accent2: '#361A37',
-  accent2Hovered: '#510D43',
+  accent1: '#09A89E',
+  accent1Hovered: '#08C1B5',
+  accent2: '#193634',
+  accent2Hovered: '#0C5550',
   accent3: colors.white,
   accent3Hovered: '#F5F5F5',
 
-  DEP_accentSoft: '#FC72FF33', //33 = 20%
+  DEP_accentSoft: '#09A89E33', //33 = 20%
   DEP_blue400: '#4C82FB',
 
   statusSuccess: '#21C95E',

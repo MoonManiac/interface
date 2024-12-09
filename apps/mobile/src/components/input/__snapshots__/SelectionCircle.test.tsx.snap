@@ -5,16 +5,16 @@ exports[`renders selection circle 1`] = `
   style={
     {
       "alignItems": "center",
-      "borderBottomColor": "#FC72FF",
+      "borderBottomColor": "#09A89E",
       "borderBottomLeftRadius": 999999,
       "borderBottomRightRadius": 999999,
       "borderBottomWidth": 1,
-      "borderLeftColor": "#FC72FF",
+      "borderLeftColor": "#09A89E",
       "borderLeftWidth": 1,
-      "borderRightColor": "#FC72FF",
+      "borderRightColor": "#09A89E",
       "borderRightWidth": 1,
       "borderStyle": "solid",
-      "borderTopColor": "#FC72FF",
+      "borderTopColor": "#09A89E",
       "borderTopLeftRadius": 999999,
       "borderTopRightRadius": 999999,
       "borderTopWidth": 1,
@@ -28,7 +28,7 @@ exports[`renders selection circle 1`] = `
   <View
     style={
       {
-        "backgroundColor": "#FC72FF",
+        "backgroundColor": "#09A89E",
         "borderBottomLeftRadius": 999999,
         "borderBottomRightRadius": 999999,
         "borderTopLeftRadius": 999999,

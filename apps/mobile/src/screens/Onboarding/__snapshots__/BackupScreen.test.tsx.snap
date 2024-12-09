@@ -290,7 +290,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                     style={
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#FEF4FF",
+                        "backgroundColor": "#EBF8F7",
                         "borderBottomLeftRadius": 999999,
                         "borderBottomRightRadius": 999999,
                         "borderTopLeftRadius": 999999,
@@ -320,7 +320,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                             "borderWidth": 0,
                           },
                           {
-                            "color": "#FC72FF",
+                            "color": "#09A89E",
                             "height": 16,
                             "width": 16,
                           },
@@ -331,7 +331,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                           },
                         ]
                       }
-                      tintColor="#FC72FF"
+                      tintColor="#09A89E"
                       vbHeight={16}
                       vbWidth={16}
                     >
@@ -430,7 +430,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                             {
                               "alignItems": "center",
                               "alignSelf": "flex-start",
-                              "backgroundColor": "#FC72FF1f",
+                              "backgroundColor": "#09A89E1f",
                               "borderBottomLeftRadius": 8,
                               "borderBottomRightRadius": 8,
                               "borderTopLeftRadius": 8,
@@ -450,7 +450,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                             maxFontSizeMultiplier={1.2}
                             style={
                               {
-                                "color": "#FC72FF",
+                                "color": "#09A89E",
                                 "fontFamily": "Basel Grotesk",
                                 "fontSize": 15,
                                 "fontWeight": "500",
@@ -542,7 +542,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                     style={
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#FEF4FF",
+                        "backgroundColor": "#EBF8F7",
                         "borderBottomLeftRadius": 999999,
                         "borderBottomRightRadius": 999999,
                         "borderTopLeftRadius": 999999,
@@ -571,7 +571,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                             "borderWidth": 0,
                           },
                           {
-                            "color": "#FC72FF",
+                            "color": "#09A89E",
                             "height": 12,
                             "width": 12,
                           },
@@ -582,7 +582,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                           },
                         ]
                       }
-                      tintColor="#FC72FF"
+                      tintColor="#09A89E"
                       vbHeight={19}
                       vbWidth={19}
                     >
@@ -1100,7 +1100,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                     style={
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#FEF4FF",
+                        "backgroundColor": "#EBF8F7",
                         "borderBottomLeftRadius": 999999,
                         "borderBottomRightRadius": 999999,
                         "borderTopLeftRadius": 999999,
@@ -1130,7 +1130,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                             "borderWidth": 0,
                           },
                           {
-                            "color": "#FC72FF",
+                            "color": "#09A89E",
                             "height": 16,
                             "width": 16,
                           },
@@ -1141,7 +1141,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                           },
                         ]
                       }
-                      tintColor="#FC72FF"
+                      tintColor="#09A89E"
                       vbHeight={16}
                       vbWidth={16}
                     >
@@ -1240,7 +1240,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                             {
                               "alignItems": "center",
                               "alignSelf": "flex-start",
-                              "backgroundColor": "#FC72FF1f",
+                              "backgroundColor": "#09A89E1f",
                               "borderBottomLeftRadius": 8,
                               "borderBottomRightRadius": 8,
                               "borderTopLeftRadius": 8,
@@ -1260,7 +1260,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                             maxFontSizeMultiplier={1.2}
                             style={
                               {
-                                "color": "#FC72FF",
+                                "color": "#09A89E",
                                 "fontFamily": "Basel Grotesk",
                                 "fontSize": 15,
                                 "fontWeight": "500",
@@ -1352,7 +1352,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                     style={
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#FEF4FF",
+                        "backgroundColor": "#EBF8F7",
                         "borderBottomLeftRadius": 999999,
                         "borderBottomRightRadius": 999999,
                         "borderTopLeftRadius": 999999,
@@ -1381,7 +1381,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                             "borderWidth": 0,
                           },
                           {
-                            "color": "#FC72FF",
+                            "color": "#09A89E",
                             "height": 12,
                             "width": 12,
                           },
@@ -1392,7 +1392,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                           },
                         ]
                       }
-                      tintColor="#FC72FF"
+                      tintColor="#09A89E"
                       vbHeight={19}
                       vbWidth={19}
                     >

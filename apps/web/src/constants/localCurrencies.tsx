@@ -52,7 +52,7 @@ export function getLocalCurrencyIcon(localCurrency: FiatCurrency, size = 20): Re
       return <INR_ICON width={size} height={size} />
     case FiatCurrency.BritishPound:
       return <GBP_ICON width={size} height={size} />
-    case FiatCurrency.JapaneseYen:
+    case FiatCurrency.Belanosimaen:
       return <JPY_ICON width={size} height={size} />
     case FiatCurrency.SouthKoreanWon:
       return <KRW_ICON width={size} height={size} />

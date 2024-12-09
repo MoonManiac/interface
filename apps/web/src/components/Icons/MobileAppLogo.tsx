@@ -74,7 +74,7 @@ export function MobileAppLogo(props: ComponentProps<'svg'>) {
           y2="23.4669"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FC72FF" />
+          <stop stopColor="#09A89E" />
           <stop offset="1" stopColor="#FF41F4" />
         </linearGradient>
         <linearGradient
@@ -85,7 +85,7 @@ export function MobileAppLogo(props: ComponentProps<'svg'>) {
           y2="23.4669"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FC72FF" />
+          <stop stopColor="#09A89E" />
           <stop offset="1" stopColor="#FF41F4" />
         </linearGradient>
         <linearGradient
@@ -96,7 +96,7 @@ export function MobileAppLogo(props: ComponentProps<'svg'>) {
           y2="23.4669"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FC72FF" />
+          <stop stopColor="#09A89E" />
           <stop offset="1" stopColor="#FF41F4" />
         </linearGradient>
         <linearGradient
@@ -107,7 +107,7 @@ export function MobileAppLogo(props: ComponentProps<'svg'>) {
           y2="23.4669"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FC72FF" />
+          <stop stopColor="#09A89E" />
           <stop offset="1" stopColor="#FF41F4" />
         </linearGradient>
         <linearGradient
@@ -118,7 +118,7 @@ export function MobileAppLogo(props: ComponentProps<'svg'>) {
           y2="23.4669"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FC72FF" />
+          <stop stopColor="#09A89E" />
           <stop offset="1" stopColor="#FF41F4" />
         </linearGradient>
         <linearGradient
@@ -129,7 +129,7 @@ export function MobileAppLogo(props: ComponentProps<'svg'>) {
           y2="23.4669"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FC72FF" />
+          <stop stopColor="#09A89E" />
           <stop offset="1" stopColor="#FF41F4" />
         </linearGradient>
         <linearGradient
@@ -140,7 +140,7 @@ export function MobileAppLogo(props: ComponentProps<'svg'>) {
           y2="23.4669"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FC72FF" />
+          <stop stopColor="#09A89E" />
           <stop offset="1" stopColor="#FF41F4" />
         </linearGradient>
         <linearGradient
@@ -151,7 +151,7 @@ export function MobileAppLogo(props: ComponentProps<'svg'>) {
           y2="23.4669"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FC72FF" />
+          <stop stopColor="#09A89E" />
           <stop offset="1" stopColor="#FF41F4" />
         </linearGradient>
         <linearGradient
@@ -162,7 +162,7 @@ export function MobileAppLogo(props: ComponentProps<'svg'>) {
           y2="23.4669"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FC72FF" />
+          <stop stopColor="#09A89E" />
           <stop offset="1" stopColor="#FF41F4" />
         </linearGradient>
       </defs>

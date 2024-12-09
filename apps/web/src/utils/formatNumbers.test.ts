@@ -132,7 +132,7 @@ describe('formatNumber', () => {
 
   it('formats fiat estimates for tokens correctly with spanish locale and yen currency', () => {
     mocked(useActiveLocale).mockReturnValue(Locale.SpanishSpain)
-    mocked(useActiveLocalCurrency).mockReturnValue(FiatCurrency.JapaneseYen)
+    mocked(useActiveLocalCurrency).mockReturnValue(FiatCurrency.Belanosimaen)
     const { formatNumber } = renderHook(() => useFormatter()).result.current
 
     expect(formatNumber({ input: 1234567.891, type: NumberType.FiatTokenPrice })).toBe('1,23\xa0M¥')

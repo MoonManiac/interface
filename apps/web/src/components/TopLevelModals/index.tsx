@@ -1,5 +1,5 @@
 import { OffchainActivityModal } from 'components/AccountDrawer/MiniPortfolio/Activity/OffchainActivityModal'
-import UniwalletModal from 'components/AccountDrawer/UniwalletModal'
+// import UniwalletModal from 'components/AccountDrawer/UniwalletModal'
 import { AddressQRModal } from 'components/AddressQRModal'
 import { Banners } from 'components/Banner/shared/Banners'
 import ConnectedAccountBlocked from 'components/ConnectedAccountBlocked'
@@ -11,7 +11,7 @@ import { ReceiveCryptoModal } from 'components/ReceiveCryptoModal'
 import { UkDisclaimerModal } from 'components/TopLevelModals/UkDisclaimerModal'
 import { UnichainLaunchModal } from 'components/TopLevelModals/UnichainLaunchModal'
 import AddressClaimModal from 'components/claim/AddressClaimModal'
-import DevFlagsBox from 'dev/DevFlagsBox'
+// import DevFlagsBox from 'dev/DevFlagsBox'
 import { useAccount } from 'hooks/useAccount'
 import useAccountRiskCheck from 'hooks/useAccountRiskCheck'
 import Bag from 'nft/components/bag/Bag'
@@ -24,7 +24,7 @@ import { FeatureFlags } from 'uniswap/src/features/gating/flags'
 import { useFeatureFlag } from 'uniswap/src/features/gating/hooks'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { TestnetModeModal } from 'uniswap/src/features/testnets/TestnetModeModal'
-import { isBetaEnv, isDevEnv } from 'utilities/src/environment/env'
+// import { isBetaEnv, isDevEnv } from 'utilities/src/environment/env'
 
 export default function TopLevelModals() {
   const addressClaimOpen = useModalIsOpen(ApplicationModal.ADDRESS_CLAIM)
@@ -38,7 +38,7 @@ export default function TopLevelModals() {
   const account = useAccount()
   useAccountRiskCheck(account.address)
   const accountBlocked = Boolean(blockedAccountModalOpen && account.isConnected)
-  const shouldShowDevFlags = isDevEnv() || isBetaEnv()
+  // const shouldShowDevFlags = isDevEnv() || isBetaEnv()
   const showUnichainLaunchModal = useFeatureFlag(FeatureFlags.AstroChainLaunchModal)
 
   return (
@@ -46,7 +46,7 @@ export default function TopLevelModals() {
       <AddressClaimModal isOpen={addressClaimOpen} onDismiss={addressClaimToggle} />
       <ConnectedAccountBlocked account={account.address} isOpen={accountBlocked} />
       <Bag />
-      <UniwalletModal />
+      {/* <UniwalletModal /> */}
 
       <Banners />
 
@@ -60,7 +60,7 @@ export default function TopLevelModals() {
       <GetTheAppModal />
       <PrivacyPolicyModal />
       <FeatureFlagModal />
-      {shouldShowDevFlags && <DevFlagsBox />}
+      {/* {shouldShowDevFlags && <DevFlagsBox />} */}
       {showUnichainLaunchModal && <UnichainLaunchModal />}
 
       {isAddLiquidityModalOpen && <IncreaseLiquidityModal />}

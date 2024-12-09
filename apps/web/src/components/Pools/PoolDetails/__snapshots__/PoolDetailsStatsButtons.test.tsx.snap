@@ -331,7 +331,7 @@ exports[`PoolDetailsStatsButton renders both buttons correctly 1`] = `
 }
 
 .c51 {
-  background-color: #FC72FF;
+  background-color: #09A89E;
   font-size: 20px;
   font-weight: 535;
   padding: 16px;
@@ -852,8 +852,8 @@ exports[`PoolDetailsStatsButton renders both buttons correctly 1`] = `
   border-radius: 900px;
   width: 50%;
   gap: 8px;
-  color: #FC72FF;
-  background-color: #FC72FF1f;
+  color: #09A89E;
+  background-color: #09A89E1f;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -888,8 +888,8 @@ exports[`PoolDetailsStatsButton renders both buttons correctly 1`] = `
   border-radius: 900px;
   width: 50%;
   gap: 8px;
-  color: #FC72FF;
-  background-color: #FC72FF1f;
+  color: #09A89E;
+  background-color: #09A89E1f;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;

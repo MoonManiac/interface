@@ -12,7 +12,6 @@ import Web3Status from 'components/Web3Status'
 import Row from 'components/deprecated/Row'
 import { useScreenSize } from 'hooks/screenSize/useScreenSize'
 import { useAccount } from 'hooks/useAccount'
-import { useIsExplorePage } from 'hooks/useIsExplorePage'
 import { useIsLandingPage } from 'hooks/useIsLandingPage'
 import { useIsLimitPage } from 'hooks/useIsLimitPage'
 import { useIsNftPage } from 'hooks/useIsNftPage'
@@ -75,13 +74,8 @@ function useShouldHideChainSelector() {
   const isSendPage = useIsSendPage()
   const isSwapPage = useIsSwapPage()
   const isLimitPage = useIsLimitPage()
-  const isExplorePage = useIsExplorePage()
 
-  const baseHiddenPages = isNftPage
-  const multichainHiddenPages =
-    isLandingPage || isSendPage || isSwapPage || isLimitPage || baseHiddenPages || isExplorePage
-
-  return multichainHiddenPages
+  return isLandingPage || isSendPage || isSwapPage || isLimitPage || isNftPage
 }
 
 export default function Navbar() {

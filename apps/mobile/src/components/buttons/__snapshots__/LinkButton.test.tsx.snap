@@ -50,7 +50,7 @@ exports[`LinkButton renders without error 1`] = `
       link text
     </Text>
     <svg
-      color="#FC72FF"
+      color="#09A89E"
       data-file-name="SvgExternalLink"
       height={20}
       strokeWidth={1.5}

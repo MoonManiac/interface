@@ -29,3 +29,10 @@ export const configWithoutAnimations = {
 } satisfies CreateTamaguiProps
 
 export type TamaguiGroupNames = 'item' | 'card'
+
+export const textVariants = {
+  logo: {},
+  heading1: {},
+  heading2: {},
+  // ... other existing variants
+} as const

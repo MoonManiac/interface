@@ -133,7 +133,7 @@ exports[`SplitLogo renders without error 1`] = `
   onPressOut={[Function]}
   style={
     {
-      "backgroundColor": "#361A37",
+      "backgroundColor": "#193634",
       "borderBottomLeftRadius": 12,
       "borderBottomRightRadius": 12,
       "borderTopLeftRadius": 12,
@@ -167,7 +167,7 @@ exports[`SplitLogo renders without error 1`] = `
       maxFontSizeMultiplier={1.2}
       style={
         {
-          "color": "#FC72FF",
+          "color": "#09A89E",
           "fontFamily": "Basel Grotesk",
           "fontSize": 14,
           "fontWeight": "500",
@@ -195,7 +195,7 @@ exports[`SplitLogo renders without error 1`] = `
             "borderWidth": 0,
           },
           {
-            "color": "#FC72FF",
+            "color": "#09A89E",
             "height": 16,
             "width": 16,
           },
@@ -206,7 +206,7 @@ exports[`SplitLogo renders without error 1`] = `
           },
         ]
       }
-      tintColor="#FC72FF"
+      tintColor="#09A89E"
       vbHeight={16}
       vbWidth={16}
     >

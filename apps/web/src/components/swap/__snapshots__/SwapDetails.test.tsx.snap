@@ -189,7 +189,7 @@ exports[`SwapDetails.tsx matches base snapshot, test trade exact input 1`] = `
 }
 
 .c24 {
-  background-color: #FC72FF;
+  background-color: #09A89E;
   font-size: 20px;
   font-weight: 535;
   padding: 16px;
@@ -799,7 +799,7 @@ exports[`SwapDetails.tsx renders a preview trade while disabling submission 1`] 
 }
 
 .c21 {
-  background-color: #FC72FF;
+  background-color: #09A89E;
   font-size: 20px;
   font-weight: 535;
   padding: 16px;
@@ -1217,8 +1217,8 @@ exports[`SwapDetails.tsx renders slippage tooltip 1`] = `
   cursor: pointer;
   -webkit-transition-duration: 125ms;
   transition-duration: 125ms;
-  color: #FC72FF;
-  stroke: #FC72FF;
+  color: #09A89E;
+  stroke: #09A89E;
   font-weight: 500;
 }
 

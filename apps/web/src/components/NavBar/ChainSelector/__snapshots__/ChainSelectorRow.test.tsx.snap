@@ -86,7 +86,7 @@ exports[`ChainSelectorRow should match snapshot for chainId 1 1`] = `
             <svg
               fill="none"
               height="20"
-              stroke="#FC72FF"
+              stroke="#09A89E"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"

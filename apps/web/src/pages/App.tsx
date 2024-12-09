@@ -12,7 +12,7 @@ import { Navigate, useLocation, useSearchParams } from 'react-router-dom'
 import { shouldDisableNFTRoutesAtom } from 'state/application/atoms'
 import DarkModeQueryParamReader from 'theme/components/DarkModeQueryParamReader'
 import Trace from 'uniswap/src/features/telemetry/Trace'
-import { isPathBlocked } from 'utils/blockedPaths'
+
 import { MICROSITE_LINK } from 'utils/openDownloadApp'
 import { getCurrentPageFromLocation } from 'utils/urlRoutes'
 
@@ -50,8 +50,7 @@ export default function App() {
     return null
   }
 
-  const shouldBlockPath = isPathBlocked(pathname)
-  if (shouldBlockPath && pathname !== '/swap') {
+  if (pathname === '/') {
     return <Navigate to="/swap" replace />
   }
   return (
@@ -59,7 +58,7 @@ export default function App() {
       <DarkModeQueryParamReader />
       <Trace page={currentPage}>
         {/*
-          This is where *static* page titles are injected into the <head> tag. If you
+          This is where static page titles are injected into the <head> tag. If you
           want to set a page title based on data that's dynamic or not available on first render,
           you can set it later in the page component itself, since react-helmet-async prefers the most recently rendered title.
         */}

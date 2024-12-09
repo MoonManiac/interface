@@ -7,7 +7,6 @@ import { Modal } from 'uniswap/src/components/modals/Modal'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { SwapFormContext, useSwapFormContext } from 'uniswap/src/features/transactions/swap/contexts/SwapFormContext'
 import { SwapSettingRow } from 'uniswap/src/features/transactions/swap/settings/SwapSettingsRow'
-import { ProtocolPreference } from 'uniswap/src/features/transactions/swap/settings/configs/ProtocolPreference'
 import { Slippage } from 'uniswap/src/features/transactions/swap/settings/configs/Slippage'
 import { SwapSettingConfig } from 'uniswap/src/features/transactions/swap/settings/configs/types'
 import { isExtension, isInterface } from 'utilities/src/platform'
@@ -22,7 +21,8 @@ export type SwapSettingsModalProps = {
 
 const SwapSettingsModalContent = ({ customSettings, onClose }: Omit<SwapSettingsModalProps, 'isOpen'>): JSX.Element => {
   const { t } = useTranslation()
-  const allSettings = useMemo(() => [Slippage, ...customSettings, ProtocolPreference], [customSettings])
+  // Commented out ProtocolPreference from settings list - can be re-added later if needed
+  const allSettings = useMemo(() => [Slippage, ...customSettings /* , ProtocolPreference */], [customSettings])
   const [SelectedSetting, setSelectedSetting] = useState<SwapSettingConfig>()
 
   const title = SelectedSetting ? SelectedSetting.renderTitle(t) : t('swap.settings.title')

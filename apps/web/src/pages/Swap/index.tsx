@@ -13,7 +13,7 @@ import { LimitFormWrapper } from 'pages/Swap/Limit/LimitForm'
 import { SendForm } from 'pages/Swap/Send/SendForm'
 import { SwapForm } from 'pages/Swap/SwapForm'
 import { ReactNode, useCallback, useEffect, useMemo, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { InterfaceTrade, TradeState } from 'state/routing/types'
 import { isPreviewTrade } from 'state/routing/utils'
 import { useSwapCallback } from 'state/sagas/transactions/swapSaga'
@@ -22,8 +22,7 @@ import { SwapAndLimitContextProvider, SwapContextProvider } from 'state/swap/Swa
 import { useInitialCurrencyState } from 'state/swap/hooks'
 import { CurrencyState, SwapAndLimitContext } from 'state/swap/types'
 import { useIsDarkMode } from 'theme/components/ThemeToggle'
-import { Flex, SegmentedControl, Text, Tooltip, styled } from 'ui/src'
-import { AppTFunction } from 'ui/src/i18n/types'
+import { Flex, Text, Tooltip, styled } from 'ui/src'
 import { zIndices } from 'ui/src/theme'
 import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
 import { SafetyLevel } from 'uniswap/src/data/graphql/uniswap-data-api/__generated__/types-and-hooks'
@@ -32,8 +31,6 @@ import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { FeatureFlags } from 'uniswap/src/features/gating/flags'
 import { useFeatureFlag } from 'uniswap/src/features/gating/hooks'
 import Trace from 'uniswap/src/features/telemetry/Trace'
-import { InterfaceEventNameLocal } from 'uniswap/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
 import { SwapRedirectFn } from 'uniswap/src/features/transactions/TransactionModal/TransactionModalContext'
 import { SwapFlow } from 'uniswap/src/features/transactions/swap/SwapFlow'
@@ -177,7 +174,6 @@ export function Swap({
               <UniversalSwapFlow
                 hideHeader={hideHeader}
                 hideFooter={hideFooter}
-                syncTabToUrl={syncTabToUrl}
                 initialInputCurrency={initialInputCurrency}
                 initialOutputCurrency={initialOutputCurrency}
                 swapRedirectCallback={swapRedirectCallback}
@@ -230,20 +226,10 @@ export function Swap({
   )
 }
 
-const SWAP_TABS = [SwapTab.Swap, SwapTab.Limit, SwapTab.Send, SwapTab.Buy]
-
-const TAB_TYPE_TO_LABEL = {
-  [SwapTab.Swap]: (t: AppTFunction) => t('swap.form.header'),
-  [SwapTab.Limit]: (t: AppTFunction) => t('swap.limit'),
-  [SwapTab.Send]: (t: AppTFunction) => t('send.title'),
-  [SwapTab.Buy]: (t: AppTFunction) => t('common.buy.label'),
-}
-
 function UniversalSwapFlow({
   hideHeader = false,
   hideFooter = false,
   disableTokenInputs = false,
-  syncTabToUrl = true,
   initialInputCurrency,
   initialOutputCurrency,
   prefilledState,
@@ -252,7 +238,6 @@ function UniversalSwapFlow({
 }: {
   hideHeader?: boolean
   hideFooter?: boolean
-  syncTabToUrl?: boolean
   disableTokenInputs?: boolean
   initialInputCurrency?: Currency
   initialOutputCurrency?: Currency
@@ -262,8 +247,7 @@ function UniversalSwapFlow({
 }) {
   const [currentTab, setCurrentTab] = useState(SwapTab.Swap)
   const { pathname } = useLocation()
-  const navigate = useNavigate()
-  const { t } = useTranslation()
+  useTranslation()
   const swapCallback = useSwapCallback()
   const wrapCallback = useWrapCallback()
 
@@ -274,33 +258,6 @@ function UniversalSwapFlow({
       setCurrentTab(tab)
     }
   }, [pathname, setCurrentTab])
-
-  const onTabClick = useCallback(
-    (tab: SwapTab) => {
-      sendAnalyticsEvent(InterfaceEventNameLocal.SwapTabClicked, { tab })
-      if (syncTabToUrl) {
-        navigate(`/${tab}`, { replace: true })
-      } else {
-        setCurrentTab(tab)
-      }
-    },
-    [navigate, syncTabToUrl, setCurrentTab],
-  )
-
-  const SWAP_TAB_OPTIONS = useMemo(() => {
-    return SWAP_TABS.map((tab) => ({
-      value: tab,
-      display: (
-        <Text
-          variant="buttonLabel3"
-          hoverStyle={{ color: '$neutral1' }}
-          color={currentTab === tab ? '$neutral1' : '$neutral2'}
-        >
-          {TAB_TYPE_TO_LABEL[tab](t)}
-        </Text>
-      ),
-    }))
-  }, [t, currentTab])
 
   // token warnings for URL-prefilled tokens via /swap?inputCurrency=...
   const prefilledInputCurrencyInfo = useCurrencyInfo(initialInputCurrency ? currencyId(initialInputCurrency) : '')
@@ -365,13 +322,13 @@ function UniversalSwapFlow({
       <Flex>
         {!hideHeader && (
           <Flex row gap="$spacing16">
-            <SegmentedControl
+            {/* <SegmentedControl
               outlined={false}
               size="large"
               options={SWAP_TAB_OPTIONS}
               selectedOption={currentTab}
               onSelectOption={onTabClick}
-            />
+            /> */}
           </Flex>
         )}
         {currentTab === SwapTab.Swap && (

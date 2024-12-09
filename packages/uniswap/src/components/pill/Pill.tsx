@@ -1,6 +1,5 @@
 import { ReactNode } from 'react'
 import { Flex, FlexProps, Text } from 'ui/src'
-import { TextVariantTokens } from 'ui/src/theme'
 
 type PillProps = {
   customBackgroundColor?: string
@@ -8,7 +7,22 @@ type PillProps = {
   foregroundColor?: string
   icon?: ReactNode
   label?: ReactNode
-  textVariant?: TextVariantTokens
+  textVariant?:
+    | 'monospace'
+    | 'heading1'
+    | 'heading2'
+    | 'heading3'
+    | 'subheading1'
+    | 'subheading2'
+    | 'body1'
+    | 'body2'
+    | 'body3'
+    | 'buttonLabel1'
+    | 'buttonLabel2'
+    | 'buttonLabel3'
+    | 'buttonLabel4'
+    | 'body4'
+    | undefined
 } & FlexProps
 
 export function Pill({

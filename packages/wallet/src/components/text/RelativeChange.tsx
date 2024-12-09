@@ -1,6 +1,7 @@
 import { ColorTokens, Flex, Text } from 'ui/src'
 import { Caret } from 'ui/src/components/icons'
-import { IconSizeTokens, fonts } from 'ui/src/theme'
+import { IconSizeTokens } from 'ui/src/theme'
+import { TextVariantTokens } from 'ui/src/theme/fonts'
 import { useAppFiatCurrencyInfo } from 'uniswap/src/features/fiatCurrency/hooks'
 import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
 import { TestID } from 'uniswap/src/test/fixtures/testIDs'
@@ -9,8 +10,8 @@ import { NumberType } from 'utilities/src/format/types'
 interface RelativeChangeProps {
   change?: number
   absoluteChange?: number
-  variant?: keyof typeof fonts
-  semanticColor?: boolean // If true, entire % change text will render green or red
+  variant?: TextVariantTokens // Changed this line
+  semanticColor?: boolean
   positiveChangeColor?: ColorTokens
   negativeChangeColor?: ColorTokens
   arrowSize?: IconSizeTokens

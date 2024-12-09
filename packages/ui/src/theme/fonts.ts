@@ -5,7 +5,22 @@ import { needsSmallFont } from 'ui/src/utils/needs-small-font'
 import { isInterface } from 'utilities/src/platform'
 
 // TODO(EXT-148): remove this type and use Tamagui's FontTokens
-export type TextVariantTokens = keyof typeof fonts
+export type TextVariantTokens =
+  | 'monospace'
+  | 'heading1'
+  | 'heading2'
+  | 'heading3'
+  | 'subheading1'
+  | 'subheading2'
+  | 'subheading3'
+  | 'body1'
+  | 'body2'
+  | 'body3'
+  | 'body4'
+  | 'buttonLabel1'
+  | 'buttonLabel2'
+  | 'buttonLabel3'
+  | 'buttonLabel4'
 
 const adjustedSize = (fontSize: number): number => {
   if (needsSmallFont()) {
@@ -20,16 +35,16 @@ const adjustedSize = (fontSize: number): number => {
 // on web, it's the full family name in the file
 const fontFamilyByPlatform = {
   android: {
-    medium: 'Basel-Grotesk-Medium',
-    book: 'Basel-Grotesk-Book',
+    medium: 'Belanosima-Regular',
+    book: 'Belanosima-Regular',
   },
   ios: {
-    medium: 'Basel Grotesk',
-    book: 'Basel Grotesk',
+    medium: 'Belanosima',
+    book: 'Belanosima',
   },
   web: {
-    medium: 'Basel Grotesk Medium',
-    book: 'Basel Grotesk Book',
+    medium: 'Belanosima',
+    book: 'Belanosima',
   },
 }
 
@@ -45,13 +60,17 @@ const fontFamily = {
   },
 }
 
-const baselMedium = isWeb
-  ? 'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+const BelanosimaMedium = isWeb
+  ? 'Belanosima, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
   : fontFamily.sansSerif.medium
 
-const baselBook = isWeb
-  ? 'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+const BelanosimaBook = isWeb
+  ? 'Belanosima, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
   : fontFamily.sansSerif.book
+
+// const logoFont = isWeb
+//   ? 'Belanosima, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+//   : belanosima[platform]
 
 type SansSerifFontFamilyKey = keyof typeof fontFamily.sansSerif
 type SansSerifFontFamilyValue = (typeof fontFamily.sansSerif)[SansSerifFontFamilyKey]
@@ -64,17 +83,13 @@ const platformFontFamily = (family: SansSerifFontFamilyKey): SansSerifFontFamily
   return fontFamily.sansSerif[family]
 }
 
-// NOTE: these may not match the actual font weights in the figma files,
-// but they are approved by design. If you want to change these or add new weights,
-// please consult with the design team.
-
 // default for non-button fonts
 const BOOK_WEIGHT = '400'
-const BOOK_WEIGHT_WEB = '485'
+const BOOK_WEIGHT_WEB = '400'
 
 // used for buttons
-const MEDIUM_WEIGHT = '500'
-const MEDIUM_WEIGHT_WEB = '535'
+const MEDIUM_WEIGHT = '400'
+const MEDIUM_WEIGHT_WEB = '400'
 
 const defaultWeights = {
   book: isInterface ? BOOK_WEIGHT_WEB : BOOK_WEIGHT,
@@ -82,7 +97,7 @@ const defaultWeights = {
   medium: isInterface ? MEDIUM_WEIGHT_WEB : MEDIUM_WEIGHT,
 }
 
-// on native, the Basel font files render down a few px
+// on native, the font files render down a few px
 // this adjusts them to be visually centered by default
 const NATIVE_LINE_HEIGHT_SCALE = 1.15
 
@@ -119,6 +134,13 @@ export const fonts = {
     family: platformFontFamily('book'),
     fontSize: adjustedSize(16),
     lineHeight: 24,
+    fontWeight: BOOK_WEIGHT,
+    maxFontSizeMultiplier: 1.4,
+  },
+  subheading3: {
+    family: platformFontFamily('book'),
+    fontSize: adjustedSize(14),
+    lineHeight: 20,
     fontWeight: BOOK_WEIGHT,
     maxFontSizeMultiplier: 1.4,
   },
@@ -189,12 +211,12 @@ export const fonts = {
 // TODO: Tamagui breaks font weights on Android if face *not* defined
 // but breaks iOS if face is defined
 const face = {
-  [defaultWeights.book]: { normal: baselBook },
-  [defaultWeights.medium]: { normal: baselMedium },
+  [defaultWeights.book]: { normal: BelanosimaBook },
+  [defaultWeights.medium]: { normal: BelanosimaMedium },
 }
 
 export const headingFont = createFont({
-  family: baselBook,
+  family: BelanosimaBook,
   ...(isAndroid ? { face } : null),
   size: {
     small: fonts.heading3.fontSize,
@@ -212,7 +234,7 @@ export const headingFont = createFont({
 })
 
 export const subHeadingFont = createFont({
-  family: baselBook,
+  family: BelanosimaBook,
   ...(isAndroid ? { face } : null),
   size: {
     small: fonts.subheading2.fontSize,
@@ -227,11 +249,8 @@ export const subHeadingFont = createFont({
   },
 })
 
-// for now tamagui is inferring all the font size from body, but we have differences in the diff fonts
-// so i'm filling in blanks (adding medium here), but will need to fix this properly in tamagui...
-
 export const bodyFont = createFont({
-  family: baselBook,
+  family: BelanosimaBook,
   ...(isAndroid ? { face } : null),
   size: {
     micro: fonts.body4.fontSize,
@@ -251,7 +270,7 @@ export const bodyFont = createFont({
 })
 
 export const buttonFont = createFont({
-  family: baselMedium,
+  family: BelanosimaMedium,
   size: {
     micro: fonts.buttonLabel4.fontSize,
     small: fonts.buttonLabel3.fontSize,

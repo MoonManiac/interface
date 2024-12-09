@@ -29,6 +29,6 @@ export const getUniconColors = (
   }
 
   return {
-    color: (colorToUse || '#F50DB4').toString(),
+    color: (colorToUse || '#0CE6D8').toString(),
   }
 }

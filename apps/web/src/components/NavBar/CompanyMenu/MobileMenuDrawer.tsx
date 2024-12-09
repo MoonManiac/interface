@@ -1,5 +1,4 @@
 import { useMenuContent } from 'components/NavBar/CompanyMenu/Content'
-import { DownloadApp } from 'components/NavBar/CompanyMenu/DownloadAppCTA'
 import { MenuLink } from 'components/NavBar/CompanyMenu/MenuDropdown'
 import { NavDropdown } from 'components/NavBar/NavDropdown'
 import { getSettingsViewIndex } from 'components/NavBar/PreferencesMenu'
@@ -75,7 +74,7 @@ export function MobileMenuDrawer({ isOpen, closeMenu }: { isOpen: boolean; close
   )
   const onExitPreferencesMenu = useCallback(() => changeView(PreferencesView.SETTINGS), [changeView])
   const { t } = useTranslation()
-  const tabsContent = useTabsContent({ includeNftsLink: true })
+  const tabsContent = useTabsContent()
   const menuContent = useMenuContent()
 
   // Collapse sections on close
@@ -130,7 +129,6 @@ export function MobileMenuDrawer({ isOpen, closeMenu }: { isOpen: boolean; close
                 <PreferenceSettings showHeader={false} setSettingsView={changeView} />
               </MenuSection>
 
-              <DownloadApp onClick={closeMenu} />
               <Socials iconSize="25px" />
             </Flex>
           </Accordion>

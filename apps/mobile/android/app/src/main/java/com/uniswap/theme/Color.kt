@@ -124,7 +124,7 @@ object UniswapColors {
   val Magenta700 = Color(0xFF550D56)
   val Magenta800 = Color(0xFF330733)
   val Magenta900 = Color(0xFF250225)
-  val MagentaVibrant = Color(0xFFFC72FF)
+  val MagentaVibrant = Color(0xFF70FAF0)
   val Violet50 = Color(0xFFF1EFFE)
   val Violet100 = Color(0xFFE2DEFD)
   val Violet200 = Color(0xFFBDB8FA)
@@ -193,8 +193,8 @@ val lightCustomColors = CustomColors(
   neutral2 = Color(0xFF7D7D7D),
   neutral3 = Color(0xFFCECECE),
 
-  accent1 = Color(0xFFFC72FF),
-  accent2 = Color(0xFFFFEFFF),
+  accent1 = Color(0xFF70FAF0),
+  accent2 = Color(0xFFEAF8F7),
 
   statusActive = Color(0xFF236EFF),
   statusSuccess = Color(0xFF40B66B),
@@ -214,8 +214,8 @@ val darkCustomColors = CustomColors(
   neutral2 = Color(0xFF9B9B9B),
   neutral3 = Color(0xFF5E5E5E),
 
-  accent1 = Color(0xFFFC72FF),
-  accent2 = Color(0xFF311C31),
+  accent1 = Color(0xFF70FAF0),
+  accent2 = Color(0xFF1B312F),
 
   statusActive = Color(0xFF236EFF),
   statusSuccess = Color(0xFF40B66B),

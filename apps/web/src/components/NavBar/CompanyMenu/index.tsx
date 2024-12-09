@@ -62,8 +62,13 @@ export function CompanyMenu() {
           <UniIcon onClick={handleLogoClick} data-testid="nav-uniswap-logo">
             <NavIcon width="48" height="48" />
             {isLargeScreen && (
-              <Text variant="subheading1" color="$accent1" userSelect="none">
-                Uniswap
+              <Text
+                variant="heading1"
+                color="$accent1"
+                userSelect="none"
+                style={{ fontFamily: 'MadeInChina', fontSize: '36px' }}
+              >
+                ZenSwap
               </Text>
             )}
           </UniIcon>
